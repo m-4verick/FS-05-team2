@@ -1,0 +1,25 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainBox {
+  background-color: blanchedalmond;
+  border-radius: 10px;
+}
+
+.mainBox > div {
+  font-size: 24px;
+  padding: 10px;
+}
+h2 {
+  font-size: 24px;
+}
