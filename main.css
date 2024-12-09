@@ -1,0 +1,88 @@
+html,
+hody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+section {
+  display: flex;
+  justify-content: center;
+  width: 1500px;
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(#9c9c9c, #ffffff);
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.main > button {
+  font-weight: 700;
+  font-size: 18px;
+  background-color: aquamarine;
+  margin: 10px;
+  width: 30%;
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px red;
+  border: 0px;
+}
+
+#하윤 {
+  color: white;
+  background-color: #ff9933;
+}
+#하윤:hover {
+  color: white;
+  background-color: black;
+}
+#수빈 {
+  color: white;
+  background-color: rgb(150, 91, 206);
+}
+#수빈:hover {
+  color: white;
+  background-color: black;
+}
+#조순 {
+  color: white;
+  background-color: rgb(139, 133, 40);
+}
+#조순:hover {
+  color: white;
+  background-color: black;
+}
+#유리 {
+  color: white;
+  background-color: skyblue;
+}
+#유리:hover {
+  color: white;
+  background-color: black;
+}
+#진호 {
+  color: white;
+  background-color: #536349;
+}
+#진호:hover {
+  color: white;
+  background-color: black;
+}
+
+#태진 {
+  color: white;
+  background-color: purple;
+}
+
+#태진:hover {
+  color: black;
+  background-color: white;
+}
