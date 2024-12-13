@@ -1,88 +1,85 @@
 html,
-hody {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
   width: 100%;
   height: 100%;
+  font-family: "Arial", sans-serif;
+  background: #000;
+  color: #fff;
 }
-section {
-  display: flex;
-  justify-content: center;
-  width: 1500px;
-  height: 100%;
+
+/* 반응형 크기를 위해 vw, vh, rem 사용 */
+body {
+  font-size: 1rem; /* 기본 폰트 사이즈 기준 */
+}
+
+h1 {
+  font-size: 4vw;
+  margin: 0 0 2vh 0;
+  opacity: 0;
+  animation: fadeInDown 1.5s ease forwards;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .main {
-  display: flex;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(#9c9c9c, #ffffff);
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  border-radius: 10px;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.main > button {
-  font-weight: 700;
-  font-size: 18px;
-  background-color: aquamarine;
-  margin: 10px;
-  width: 30%;
-  height: 40px;
-  border-radius: 10px;
-  box-shadow: 10px 5px 5px red;
-  border: 0px;
+button {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.8em 1.2em;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.8em;
+  background: linear-gradient(45deg, #555, #333);
+  color: #fff;
+  transition: transform 0.3s ease, background 0.3s ease;
+  perspective: 1000px;
 }
 
-#하윤 {
-  color: white;
-  background-color: #ff9933;
-}
-#하윤:hover {
-  color: white;
-  background-color: black;
-}
-#수빈 {
-  color: white;
-  background-color: rgb(150, 91, 206);
-}
-#수빈:hover {
-  color: white;
-  background-color: black;
-}
-#조순 {
-  color: white;
-  background-color: rgb(139, 133, 40);
-}
-#조순:hover {
-  color: white;
-  background-color: black;
-}
-#유리 {
-  color: white;
-  background-color: skyblue;
-}
-#유리:hover {
-  color: white;
-  background-color: black;
-}
-#진호 {
-  color: white;
-  background-color: #536349;
-}
-#진호:hover {
-  color: white;
-  background-color: black;
+button:hover {
+  background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
+  transform: rotateY(20deg) scale(1.1);
 }
 
-#태진 {
-  color: white;
-  background-color: purple;
+button:active {
+  transform: rotateY(360deg) scale(0.9);
 }
 
-#태진:hover {
-  color: black;
-  background-color: white;
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 7vw;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 0.6em 1em;
+  }
 }
