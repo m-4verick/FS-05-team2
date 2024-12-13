@@ -1,0 +1,116 @@
+* {
+  font-family: "Orbitron", sans-serif;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/16/DNA_orbit_animated.gif");
+  background-repeat: no-repeat;
+  background-position: 70% 80%;
+}
+
+.h1wrapper {
+  margin: 10px;
+  border: 1px solid white;
+  padding: 0 20px;
+}
+
+h2 {
+  font-weight: bolder;
+  margin-left: 20px;
+  background-color: red;
+  color: black;
+  display: inline-block;
+  padding: 10px 20px;
+  padding-right: 1000px;
+}
+fieldset {
+  margin: 10px;
+}
+
+.spf {
+  padding: 0;
+  padding-left: 20px;
+  max-width: 50%;
+}
+.deco {
+  position: absolute;
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  top: 103px;
+  right: 27px;
+  font-size: 16px;
+
+}
+
+img {
+  position: absolute;
+  bottom: 30px;
+  width: 150px;
+}
+
+.imgwrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.www {
+  position: relative;
+}
+.deploy {
+  padding: 30px 70px;
+  border: none;
+  background-color: white;
+  color: black;
+  font-size: 35px;
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+
+
+}
+
+.deploy:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+
+.loc{
+  background-color: white;
+  color: black;
+  padding: 3px 10px;
+}
+
+.easterEGG {
+  position: fixed;
+  top: 100%;
+  left: 100%;
+  transform: translate(-100%, -100%);
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: white;
+}
+
+
+.hihi {
+  background-color: white;
+  color: black;
+}
+
+legend {
+  background-color: white;
+  color: black;
+}
+
+.con{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
