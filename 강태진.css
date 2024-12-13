@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #0a0a0a;
+  color: #ffffff;
+  font-family: "Work Sans", sans-serif;
+  height: 100vh;
+  width: 100vw;
+}
+
+.glitch {
+  position: relative;
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  color: #ff00c8;
+  width: 100%;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.glitch::before {
+  top: 0;
+  animation: glitch-anim 2s infinite;
+}
+.glitch::after {
+  top: 0;
+  animation: glitch-anim2 2s infinite;
+  color: #00fff9;
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(42px, 9999px, 44px, 0);
+  }
+  10% {
+    clip: rect(12px, 9999px, 68px, 0);
+  }
+  20% {
+    clip: rect(15px, 9999px, 40px, 0);
+  }
+  30% {
+    clip: rect(5px, 9999px, 38px, 0);
+  }
+  40% {
+    clip: rect(45px, 9999px, 65px, 0);
+  }
+  50% {
+    clip: rect(8px, 9999px, 20px, 0);
+  }
+  60% {
+    clip: rect(22px, 9999px, 80px, 0);
+  }
+  70% {
+    clip: rect(1px, 9999px, 30px, 0);
+  }
+  80% {
+    clip: rect(25px, 9999px, 45px, 0);
+  }
+  90% {
+    clip: rect(2px, 9999px, 76px, 0);
+  }
+  100% {
+    clip: rect(42px, 9999px, 44px, 0);
+  }
+}
+
+@keyframes glitch-anim2 {
+  0% {
+    clip: rect(2px, 9999px, 10px, 0);
+  }
+  10% {
+    clip: rect(8px, 9999px, 85px, 0);
+  }
+  20% {
+    clip: rect(40px, 9999px, 24px, 0);
+  }
+  30% {
+    clip: rect(36px, 9999px, 90px, 0);
+  }
+  40% {
+    clip: rect(12px, 9999px, 50px, 0);
+  }
+  50% {
+    clip: rect(40px, 9999px, 20px, 0);
+  }
+  60% {
+    clip: rect(5px, 9999px, 70px, 0);
+  }
+  70% {
+    clip: rect(25px, 9999px, 55px, 0);
+  }
+  80% {
+    clip: rect(10px, 9999px, 65px, 0);
+  }
+  90% {
+    clip: rect(15px, 9999px, 55px, 0);
+  }
+  100% {
+    clip: rect(2px, 9999px, 10px, 0);
+  }
+}
+
+.sub-title {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #ccc;
+  text-transform: uppercase;
+}
+
+.profile-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 100%;
+  border: 2px solid #fff;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.description {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: #ddd;
+  transition: opacity 0.5s ease; /* 전환 추가 */
+  opacity: 1; /* 초기 상태 */
+}
+
+.cta-button {
+  background: #ff00c8;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  color: #0a0a0a;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #00fff9;
+}
+
+/* 배경용 캔버스에 대한 스타일 */
+#canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.details {
+  display: none;
+  margin-top: 30px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  color: #ccc;
+  text-align: left;
+}
+
+.details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.details li {
+  margin-bottom: 10px;
+}
+
+.details.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.glitch {
+  position: relative;
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.sub-title {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #ccc;
+  text-transform: uppercase;
+}
+
+.profile-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 100%;
+  border: 2px solid #fff;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.cta-button {
+  background: #ff00c8;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  color: #0a0a0a;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #00fff9;
+}
+
+#canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.details {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  color: #ccc;
+  text-align: left;
+}
+
+.details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.details li {
+  margin-bottom: 10px;
+}
+
+.details.show {
+  opacity: 1;
+  transform: translateY(0);
+}
