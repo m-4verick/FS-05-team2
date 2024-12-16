@@ -1,10 +1,13 @@
 const main = document.querySelector(".mainBox");
+const myName = document.getElementById("myName");
+const scroller = document.getElementById("scroller");
 
 const colors = ["red", "coral", "yellow", "green", "blue", "navy", "purple"];
 
 let i = 0;
 let a = 6;
-main.addEventListener("click", (e) => {
+
+myName.addEventListener("click", (e) => {
   const initColor = "blanchedalmond";
   if (i < 7) {
     main.style.backgroundColor = colors[i];
@@ -18,14 +21,18 @@ main.addEventListener("click", (e) => {
     main.style.color = "black";
   }
 });
-// const btn = document.createElement("button");
 
-// window.addEventListener("scroll", (e) => {
-//   console.log(window.scrollY);
-//   if (window.scrollY !== 0) {
-//     // console.log(1);
-//     main.append(btn, "top");
-//   } else {
-//     // console.log(2);
-//   }
-// });
+window.addEventListener("scroll", (e) => {
+  if (window.scrollY > 100) {
+    scroller.style.position = "sticky";
+    scroller.style.bottom = 0;
+  } else {
+    scroller.style.position = "";
+    scroller.style.bottom = 0;
+  }
+  console.log(window.scrollY);
+});
+
+scroller.addEventListener("click", (e) => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
