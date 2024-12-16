@@ -11,7 +11,7 @@ const keys = document.querySelectorAll(".key")
 const values = document.querySelectorAll(".value")
 
 function setDayMode() {
-  body.style.backgroundColor = "#FFFFF0"; 
+  body.style.backgroundColor = "#FFFFE3"; 
   headerH1.style.color = "#505050";
   for (let i = 0; i < sections.length; i++) {
     sections[i].style.background = "linear-gradient(to left, #bdc3c7, #2c3e50)";
@@ -55,8 +55,34 @@ spaceButton.addEventListener("click", setSpaceMode)
 
 document.addEventListener('contextmenu', function(e) {
   e.preventDefault();
-  alert('어허~ 누르지 마시요');
+  alert('좌클릭 금지');
 })
 
-console.log(keys[0].style.color); // 첫 번째 .key 요소의 인라인 색상
-console.log(values[0].style.color); // 첫 번째 .value 요소의 인라인 색상
+const firstSection = document.querySelector(".firstsection")
+
+function changeInColor () {
+  firstSection.style.backgroundImage = "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lFtcsjIh2utLQmTEoXJQSynM1nRpf9Kf9w&s)";
+}
+
+function changeOutColor () {
+  firstSection.style.backgroundImage = "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpl0kffrglB0mQpZo1ZfubfU119CtL7n_wcg&s)";
+}
+
+
+firstSection.addEventListener("mouseover", changeInColor )
+firstSection.addEventListener("mouseout", changeOutColor )
+
+
+// function changeInColor (e) {
+//   if(e.type === "mouseover")
+//   lastSection.style.backgroundImage = "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8lFtcsjIh2utLQmTEoXJQSynM1nRpf9Kf9w&s)";
+// }
+
+// function changeOutColor () {
+//   lastSection.style.backgroundImage = "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpl0kffrglB0mQpZo1ZfubfU119CtL7n_wcg&s)";
+// }
+
+
+// lastSection.addEventListener("mouseover", changeInColor )
+// lastSection.addEventListener("mouseout", changeOutColor )
+
