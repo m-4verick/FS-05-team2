@@ -16,6 +16,8 @@ section {
 .mainBox {
   background-color: blanchedalmond;
   border-radius: 10px;
+  max-width: 1200px;
+  width: 100%;
 }
 
 .mainBox > div {
